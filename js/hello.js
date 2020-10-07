@@ -1,5 +1,6 @@
 // Send a customized message back based on time
 
+// Log
 console.log("I'm in the hello.js file");
 
 // Get date and time
