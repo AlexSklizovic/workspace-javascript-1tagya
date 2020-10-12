@@ -74,7 +74,7 @@
             <h1>Window and document object </h1>
             <p> Try alert, open, location, url </p>
             <script>
-
+                document.write(window.location.href);
             </script>
 
 
@@ -82,7 +82,7 @@
 
         <div class="practice">
             <h1> Get textcontent of an element </h1>
-            <p>Perform arithmetic operation on <span id="num1"> 4 </span> and <span id="num2">5 </span> </p>
+            <p>Perform arithmetic operation on <span id="n1"> 4 </span> and <span id="n2">5 </span> </p>
             <p>Result:
                 <script src="js/arith.js"></script>
             </p>
@@ -96,6 +96,11 @@
             <p id="p3"> Paragraph Number three </p>
             <p>Please write JavaScript code to change the content of each paragraph.​
             <p>
+            <script>
+              document.getElementById("p1").textContent="Commondeered p1";
+              document.getElementById("p2").innerHTML="<h1>Commondeered p2</h1>";
+              document.getElementById("p3").textContent="Commondeered p3";
+            </script>
 
 
         </div>
