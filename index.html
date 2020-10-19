@@ -149,7 +149,21 @@
                 </p>
             </form>
             <script>
-              
+              // event handler
+              function welcome(){
+                // display a welcome message
+                // get input
+                let name = document.getElementById("cName").value;
+
+                // display message
+                let outputE = document.getElementById("message");
+                outputE.innerHTML = "Welcome to JavaScript Event <b>" + name + "</b>";
+              }
+
+              // event --> event handler
+              // action
+              let fE = document.getElementById("cName");
+              fE.addEventListener('blur', welcome, false);
             </script>
         </div>
 
@@ -158,6 +172,16 @@
             Calculating Square:
             <input type="text" id="num" placeholder="Type in a number"> <sup> 2 </sup> =
             <label id="result"> ? </label>
+
+            <script>
+              function calcSquare(){
+                // get input
+                let sqNum = parseInt(document.getElementById("num").value);
+                document.getElementById("result2").textContent = sqNum * sqNum;
+              }
+              document.getElementById
+
+            </script>
 
         </div>
 
@@ -171,9 +195,20 @@
 
             <input type="button" id="tryit" value="Click and Display">​
 
-            <div id="message">​
+            <div id="message1">​
             </div>
+            <script>
+              // handler
+              function convertHTML(){
+                let inputCode = document.getElementById("code").value;
 
+                document.getElementById("message1").innerHTML = inputCode;
+              }
+
+              // add listener 
+              document.getElementById("tryit").addEventListener("click", convertHTML);
+
+            </script>
 
         </div>
 
