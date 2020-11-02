@@ -498,7 +498,7 @@
           });
 
           // hide the next button --- try it with me. 
-          $('#quiz input[type="button"]'').hide();
+          $('#quiz input[type="button"]').hide();
           
           // check answer
           $('#quiz input[type="text"]').blur(function(){
@@ -508,21 +508,25 @@
               if (parseInt($(this).val()) !== ans) {
                   // highlight the answer
                    $(this).css("background-color", "red");
-                } else {
+              } else {
                   // if the answer is correct. background color be green and show the next button
-
-
-
-
+                  $(this).css("background-color","green");
+                  $('#quiz input[type="button"]').show();
               } 
           });
 
           //Get the next question --- try it 
           $('#quiz input[type="button"]').click(function(){
- 
+              $('#quiz span').each(function(){
+              // get the random number  -- try it with me
+              let num = gen();
+              $(this).text(num);
+              });
 
+              //make it nice --- clear the text box / clear background-color
+              $('#quiz input[type = "text"]').css("background-color", "white");
+              $('#quiz input[type = "text"]').val("");
           });
-
 
 				</script>
 
